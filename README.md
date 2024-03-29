@@ -19,5 +19,5 @@ To use this interpreter, you need to provide a source code file as an argument w
 
 Example:
 ```bash
-node interpreter.js source_code.txt
+node main.js script
 ```
