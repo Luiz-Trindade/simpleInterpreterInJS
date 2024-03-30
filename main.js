@@ -45,7 +45,6 @@ function readFile(){
 
 		else{
 			content = data.trim().split("\n");
-			//console.log(content);
 			interpreterFile();
 		}
 	})
@@ -68,9 +67,8 @@ function interpreterFile(){
 		//	Escreve um texto na tela.
 		if (command == "echo"){
 			let contentToWrite = line.slice(1).join(" ");
-			//console.log(contentToWrite);
 			for (let char of contentToWrite){
-				process.stdout.write(char);
+				process.stdout.write(String(char));
 			}
 		}
 
@@ -125,7 +123,7 @@ function interpreterFile(){
 		// Vê o conteúdo de uma variável.
 		else if (command == "see"){
 			let varToSee = line[1];
-			console.log(variables[varToSee]);
+			process.stdout.write(String(variables[varToSee]));
 		}
 
 		counter += 1;
